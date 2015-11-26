@@ -43,7 +43,8 @@ class ResponseManager(Thread):
             self.line += 1
 
 HOST = "192.168.1.5"
-PORT = 8801
+#HOST = "104.229.212.48"
+PORT = 3000
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM);
 sock.connect((HOST, PORT))

@@ -1,12 +1,11 @@
 var net = require('net');
 
-var HOST = "192.168.1.5";
-var PORT = "8801";
+var PORT = "3000";
 var clients = [];
 
 //Create server, and have it listen for connection on PORT
 var server = net.createServer();
-server.listen(PORT, HOST);
+server.listen(PORT);
 console.log("Listening for connections...")
 
 //Connection event handler
