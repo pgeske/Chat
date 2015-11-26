@@ -12,16 +12,19 @@ console.log("Listening for connections...")
 //Connection event handler
 server.on("connection", function(sock) {
     console.log("Received connection from " + sock.address().address);
+    sock.write("You've connected to me")
     //Push client
     clients.push(sock);
     //Handle packets received from client
     sock.on("data", function(buff) {
-        console.log(buff.toString("utf8"));
+        var message = buff.toString("utf8");
         clients.forEach(function(csock) {
-            if (!(sock === csock)) {
-                csock.write(buff.toString("utf8"));
-            }
+            csock.write(message);
         })
+    })
+    //Handle socket closing
+    sock.on("close", function() {
+        clients.splice(clients.indexOf(sock));
     })
 })
 
