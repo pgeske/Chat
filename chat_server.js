@@ -12,7 +12,6 @@ console.log("Listening for connections...")
 //Connection event handler
 server.on("connection", function(sock) {
     console.log("Received connection from " + sock.address().address);
-    sock.write("You've connected to me")
     //Push client
     clients.push(sock);
     //Handle packets received from client
