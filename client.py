@@ -25,7 +25,7 @@ class ResponseManager(Thread):
             with self.lock:
                 print message
 
-HOST = "127.0.0.1"
+HOST = "192.168.1.5"
 PORT = 8801
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM);

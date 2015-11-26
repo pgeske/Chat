@@ -1,6 +1,6 @@
 var net = require('net');
 
-var HOST = "127.0.0.1";
+var HOST = "192.168.1.5";
 var PORT = "8801";
 var clients = [];
 
