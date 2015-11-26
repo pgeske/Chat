@@ -1,11 +1,12 @@
 var net = require('net');
 
-var PORT = "3000";
+var PORT = "8080";
+var HOST = "0.0.0.0";
 var clients = [];
 
 //Create server, and have it listen for connection on PORT
 var server = net.createServer();
-server.listen(PORT);
+server.listen(PORT, HOST);
 console.log("Listening for connections...")
 
 //Connection event handler
