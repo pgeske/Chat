@@ -16,6 +16,7 @@ class InputManager(Thread):
             self.window.move(2,5)
             self.window.addstr("> ")
             message = self.window.getstr()
+            if message == "": continue
             #Append handle to message
             message = "[" + username + "]: " + message
             self.window.erase()
