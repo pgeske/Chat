@@ -42,8 +42,7 @@ class ResponseManager(Thread):
             self.window.refresh()
             self.line += 1
 
-#HOST = "192.168.1.5"
-HOST = "104.229.212.48"
+HOST = "52.33.47.32"
 PORT = 8080
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM);
